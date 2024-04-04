@@ -1,3 +1,6 @@
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 {% extends "base.html" %} {% load static %} {% block scripts %}
 <script src="{% static 'posts/main.js' %}" defer></script>
-{% endblock scripts %} {% block titles %} posts {% endblock titles %} {% block content %} {% for obj in qs %} {{obj.title}} - {{obj.body}} <br> {% endfor %} {% endblock content %}
+{% endblock scripts %} {% block titles %} posts {% endblock titles %} {% block content %} {% for obj in qs %} {{obj.title}} - {{obj.body}} <br> {% endfor %}
+<div id="hello-world"></div>
+{% endblock content %}
