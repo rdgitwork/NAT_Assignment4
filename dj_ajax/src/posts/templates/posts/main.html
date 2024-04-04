@@ -2,11 +2,12 @@
 {% extends "base.html" %} {% load static %} {% block scripts %}
 <script src="{% static 'posts/main.js' %}" defer></script>
 {% endblock scripts %} {% block titles %} posts {% endblock titles %} {% block content %}
+
 <div id="spinner-box" class="text-center">
-    <div class="spinner-border" role="status">
-        <span class="visually-hidden">Loading..</span>
-    </div>
+    <div class="spinner-border" role="status"></div>
 </div>
 <div id="posts-box"></div>
-<div id="hello-world"></div>
+<div class="text-center mb-3" id="end-box">
+    <button class="btn btn-primary" id="load-btn">Load More</button>
+</div>
 {% endblock content %}
