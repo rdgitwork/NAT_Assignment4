@@ -7,7 +7,7 @@ from .views import (
     post_detail_data_view,
     update_post,
     delete_post,
-    image_upload_view
+    image_upload_view,
 )
 
 app_name = 'posts'
