@@ -1,7 +1,9 @@
-const handleAlerts = (type, msg) => {
-    alertbox.innerHTML = `
-    <div class="alert alert-${type}" role="alert">
-        ${msg}
-    </div>
-    `
-}
+const handleAlerts = (alertType, message) => {
+    alertBox.innerHTML = `
+      
+    
+      <div class="alert alert-${alertType}" role="alert">
+      
+          ${message}
+      </div>`;
+};

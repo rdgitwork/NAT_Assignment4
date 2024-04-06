@@ -5,7 +5,6 @@ const postsBox = document.getElementById('posts-box')
 const spinnerBox = document.getElementById('spinner-box')
 const loadBtn = document.getElementById('load-btn')
 const endBox = document.getElementById('end-box')
-const alertbox = document.getElementById('alert-box')
 const postForm = document.getElementById('post-form')
 const title = document.getElementById('id_title')
 const body = document.getElementById('id_body')
@@ -16,7 +15,7 @@ const url = window.location.href
 const dropzone = document.getElementById('my-dropzone')
 const addBtn = document.getElementById('add-btn')
 const closeBtns = [...document.getElementsByClassName('add-modal-close')]
-
+const alertbox = document.getElementById('alert-box')
 
 
 
@@ -38,11 +37,6 @@ const getCookie = (name) => {
     return cookieValue;
 }
 const csrftoken = getCookie('csrftoken');
-const deleted = localStorage.getItem('title')
-if (deleted) {
-    handleAlerts('danger', `deleted "${deleted}"`)
-    localStorage.clear()
-}
 
 const likeUnlikePosts = () => {
     const likeUnlikeForms = [...document.getElementsByClassName('like-unlike-form')]
@@ -69,6 +63,21 @@ const likeUnlikePosts = () => {
         })
     }))
 }
+
+const handleAlerts = (type, message) => {
+    alertbox.innerHTML = `
+        <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+            ${message}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+    `;
+}
+const deleted = localStorage.getItem('title')
+if (deleted) {
+    handleAlerts('danger', `deleted "${deleted}"`)
+    localStorage.clear()
+}
+
 
 let visible = 3
 

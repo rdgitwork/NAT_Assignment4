@@ -1,0 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light" style="background-color: #2196F3; padding-bottom: 20px;">
+    <div class="container-fluid d-flex justify-content-center">
+        <a class="navbar-brand mx-auto" href="{% url 'posts:main-board' %}" style="color: white;">Posts-Proj</a>
+        <span class="navbar-text mx-auto" style="font-size: 24px; color: white;">RD</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="/" style="color: white;">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'profiles:my-profile' %}" style="color: white;">My Profile</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
