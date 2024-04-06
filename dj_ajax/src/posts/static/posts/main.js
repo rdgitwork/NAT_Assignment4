@@ -5,7 +5,7 @@ const postsBox = document.getElementById('posts-box')
 const spinnerBox = document.getElementById('spinner-box')
 const loadBtn = document.getElementById('load-btn')
 const endBox = document.getElementById('end-box')
-
+const alertbox = document.getElementById('alert-box')
 const postForm = document.getElementById('post-form')
 const title = document.getElementById('id_title')
 const body = document.getElementById('id_body')
@@ -14,7 +14,8 @@ const csrf = document.getElementsByName('csrfmiddlewaretoken')
 const url = window.location.href
 
 
-const alertbox = document.getElementById('alert-box')
+
+
 console.log('csrf', csrf[0].value)
 
 const getCookie = (name) => {
@@ -33,6 +34,11 @@ const getCookie = (name) => {
     return cookieValue;
 }
 const csrftoken = getCookie('csrftoken');
+const deleted = localStorage.getItem('title')
+if (deleted) {
+    handleAlerts('danger', `deleted "${deleted}"`)
+    localStorage.clear()
+}
 
 const likeUnlikePosts = () => {
     const likeUnlikeForms = [...document.getElementsByClassName('like-unlike-form')]
