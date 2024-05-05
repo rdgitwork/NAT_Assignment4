@@ -16,6 +16,10 @@ This Simple Social Media Website is built using Django, JavaScript, and Bootstra
 - JavaScript: Programming language used for client-side scripting and interactivity.
 - Bootstrap: Front-end framework for designing responsive and mobile-first websites.
 
+**Preview**
+- Link: https://rdmax.pythonanywhere.com/
+- This was just an experimental website to familiarize myself with the Python environment for web development.
+
 **Installation**
 
 To run the Simple Social Media Website on your local machine, follow these steps:
